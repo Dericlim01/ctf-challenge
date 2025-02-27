@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+<!--Did-->
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mystery Challenge</title>
+    <title>CTF Challenge</title>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            console.log("flag: 5140c8e4ec30a3d4579e735acfb1ac7b");
-        });
+        console.groupCollapsed("Developer Debug Info")
+        console.log("Hmm... I don't think here is the correct way")
+        console.log(atob("aHR0cHM6Ly9kZXJpY2xpbTAxLmdpdGh1Yi5pby9jdGYtY2hhbGxlbmdlL2luc2lnaHQuaHRtbA=="))
+        console.groupEnd();
 
-        function revealHint() {
-            alert("Nah, no hint. You're in the wrong way.");
+        function revealHint() { //you
+            alert("Nah, nothing here actually. You're in the wrong way.");
         }
     </script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -23,7 +25,7 @@
             font-weight: bold;
             border-radius: 10px;
             cursor: pointer;
-            transition: background 0.3s ease-in-out;
+            transition: background 0.3s /*try*/ ease-in-out;
         }
         .btn:hover {
             background-color: #d97706;
@@ -32,10 +34,10 @@
 </head>
 <body class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
     <div class="bg-white bg-opacity-10 p-8 rounded-2xl shadow-xl text-center backdrop-blur-md">
-        <h1 class="text-5xl font-extrabold mb-4 text-yellow-400 drop-shadow-lg">Anything here?</h1>
+        <h1 class="text-5xl font-extrabold mb-4 text-yellow-400 drop-shadow-lg">Looking for?</h1>
         <p class="text-lg text-gray-200">Nothing here</p>
-        <button class="btn" onclick="revealHint()">Hint</button>
+        <button class="btn" onclick="revealHint()">OK</button>
     </div>
-    <!-- Maybe checking the console will help? -->
 </body>
+<!--c0n5ol3-->
 </html>

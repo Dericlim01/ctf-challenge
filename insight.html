@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CTF Challenge</title>
+    <script>
+        console.groupCollapsed("Developer Debug Info");
+        console.log("Initializing challenge...");
+        console.log("Fetching resources...");
+        console.log("User-Agent:", navigator.userAgent);
+
+        fetch('text.json')
+            .then(response => response.json())
+            .then(data => {
+                let fakeResponse = { status: "200 OK", message: atob(data.flag) };
+                console.log("Server Response:", JSON.stringify(fakeResponse, null, 2));
+                console.log("No flag here");
+                console.log("Flag: apuCTF{1s_th1s_fl4g?}");
+            })
+            .catch(error => {
+                console.error("Error fetching flag:", error);
+                console.log("Fallback flag: apuCTF{fl4g_1s_h3re}");
+            })
+            .finally(() => {
+                console.log("Debug session complete.");
+                console.groupEnd();
+            });
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f59e0b;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background-color: #d97706;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+    <div class="bg-white bg-opacity-10 p-8 rounded-2xl shadow-xl text-center backdrop-blur-md">
+        <h1 class="text-5xl font-extrabold mb-4 text-yellow-400 drop-shadow-lg">Nothing Here</h1>
+        <p class="text-lg text-gray-200">Can't find anything here.</p>
+    </div>
+</body>
+</html>
