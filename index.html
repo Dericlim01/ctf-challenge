@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Challenge</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            console.log("flag: 5140c8e4ec30a3d4579e735acfb1ac7b");
+        });
+
+        function revealHint() {
+            alert("Nah, no hint. You're in the wrong way.");
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #f59e0b;
+            color: black;
+            font-weight: bold;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+        .btn:hover {
+            background-color: #d97706;
+        }
+    </style>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gray-900 text-white">
+    <div class="bg-white bg-opacity-10 p-8 rounded-2xl shadow-xl text-center backdrop-blur-md">
+        <h1 class="text-5xl font-extrabold mb-4 text-yellow-400 drop-shadow-lg">Anything here?</h1>
+        <p class="text-lg text-gray-200">Nothing here</p>
+        <button class="btn" onclick="revealHint()">Hint</button>
+    </div>
+    <!-- Maybe checking the console will help? -->
+</body>
+</html>
